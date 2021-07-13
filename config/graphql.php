@@ -102,13 +102,16 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'book' => App\GraphQL\Queries\BookQuery::class,
+                'books' => App\graphql\Queries\BooksQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                'createBook' => App\graphql\Mutations\CreateBookMutation::class,
+                'updateBook' => App\graphql\Mutations\UpdateBookMutation::class,
+                'deleteBook' => App\graphql\Mutations\DeleteBookMutation::class,
             ],
             'types' => [
-                // ExampleType::class,
+                'Book' => App\GraphQL\Types\BookType::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
